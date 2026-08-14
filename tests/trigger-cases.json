@@ -1,0 +1,36 @@
+{
+  "schema_version": "gka.trigger-cases.v3",
+  "should_trigger": [
+    "分析这个博彩落地页的跳转和下载链，判断当前客户端从哪里获取域名配置",
+    "从这个 APK 找出当前构建实际使用的会员 API、游戏商和支付配置关系",
+    "根据 HAR 判断会员接口、代理接口和后台接口之间的角色边界",
+    "检查代理是否能看到其他代理层级下的会员和佣金明细",
+    "梳理充值订单、支付回调、平台入账和补单之间的状态机",
+    "分析提现审核、代付订单和最终钱包扣款由哪个系统控制",
+    "这个游戏启动 token 和平台会员、游戏商账户、钱包之间是什么关系",
+    "对象存储列表被拒绝，判断已知会员上传对象和 CDN 资源的读取边界",
+    "比较两批白标客户端、配置字段、接口组合和签名证书是否属于同一软件家族",
+    "把现有博彩客户端、订单、接口和存储证据整理成可复核的审计结论",
+    "博彩落地页有几十个轮换域名，怎样判断什么时候转向 APK 和动态配置",
+    "博彩客户端 AES 和静态签名都能复刻，这究竟证明协议兼容还是匿名认证缺陷",
+    "把博彩 SPA 路径、Hermes 路径表、运行时请求和已测接口做差集并区分可达与越权",
+    "博彩登录验证码拦住了，审计访客试玩注册签发的身份能访问哪些会员业务状态",
+    "博彩企业签名包、provisioning profile 和当前下载链怎样组成可执行的证据链",
+    "把博彩平台的框架版本命中、部署前置条件、真实复现和防护正确结果分层写进报告"
+  ],
+  "routing_cases": [
+    {"prompt": "这个域名是落地页、下载页还是当前业务入口", "reference": "references/landing-and-distribution.md"},
+    {"prompt": "APK 里的 bootstrap 和热更新如何选择当前 API", "reference": "references/client-and-dynamic-config.md"},
+    {"prompt": "会员、代理和管理员对订单对象的权限边界", "reference": "references/api-role-and-business-logic.md"},
+    {"prompt": "充值、提现、代付和回调状态如何衔接", "reference": "references/payment-wallet-and-callback.md"},
+    {"prompt": "存储、CDN、白标代码和运营主体怎么关联", "reference": "references/storage-infrastructure-and-family.md"},
+    {"prompt": "这个平台由哪些组件、角色和服务组成", "reference": "references/gambling-ecosystem.md"},
+    {"prompt": "现有证据是否足够形成 Finding", "reference": "references/evidence-and-reporting.md"}
+  ],
+  "should_not_trigger": [
+    "解释 AES-CBC 的数学原理",
+    "给普通电商网站做一次通用代码审查",
+    "写一个批量扫描全部端口的脚本",
+    "设计一个移动应用界面"
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Gambling Platform Audit"
+  short_description: "Gambling ecosystem, business-flow, and evidence reasoning"
+  default_prompt: "Use $gambling-killchain to place the artifact in the gambling-platform ecosystem, model the relevant role/object/state boundary, and choose the smallest discriminating audit test."
+policy:
+  allow_implicit_invocation: true

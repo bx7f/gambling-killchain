@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "gambling-killchain",
+  "displayName": "Gambling Platform Audit",
+  "version": "1.0.0",
+  "description": "Gambling ecosystem, mobile-client, business-flow, payment, storage, family-correlation, and evidence reasoning.",
+  "author": {
+    "name": "Gambling Platform Audit Maintainers"
+  },
+  "keywords": [
+    "security-audit",
+    "gambling-platform",
+    "mobile-security",
+    "business-logic",
+    "evidence"
+  ]
+}

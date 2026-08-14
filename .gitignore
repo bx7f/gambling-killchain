@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+
+# macOS
+.DS_Store
+
+# Local runtime settings
+.claude/settings.local.json
+
+# Case artifacts
+evidence/
+*.jsonl.tmp
+
+# Mobile and capture artifacts
+*.apk
+*.aab
+*.apks
+*.ipa
+*.mobileprovision
+*.har
+*.pcap
+*.pcapng
+jadx-out/
